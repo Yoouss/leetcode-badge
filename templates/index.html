@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My Leetcode badge</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        {% if response_status != 200%}
+            <h1>Error {{response_status}} : Failed to retrieve data :(</h1>
+        {% else %}
+        <div class="badge">
+            <img src="{{profil_info['pfp']}}" alt="pfp">
+        </div>
+        {% endif %}
+    </body>
+</html>

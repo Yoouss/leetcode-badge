@@ -1,0 +1,11 @@
+div.badge {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(218, 195, 255);
+    padding: 15px;
+}
+
+img {
+    width: 70px;
+    border-radius: 50%;
+}
