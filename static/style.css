@@ -1,8 +1,38 @@
 div.badge {
-    width: 200px;
-    height: 100px;
-    background-color: rgb(218, 195, 255);
-    padding: 15px;
+    width: 495px;
+    height: 195px;
+    background-color: rgb(254, 254, 254);
+    border: solid black 3px;
+    border-radius: 15px;
+}
+
+
+
+div.easyStats, div.mediumStats, div.hardStats {
+    display: flex;
+    flex-direction: column; 
+    width: 100px;
+    height: fit-content;
+    background-color: rgb(255, 240, 243);
+
+    justify-content: center;
+    text-align: center;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    font-size: 13px;
+    line-height: 4px;
+    
+}
+
+div.easyStats h3 {
+    color: hsl(180 74% 42%);
+}
+
+div.mediumStats h3 {
+    color: hsl(43 100% 50%);
+}
+
+div.hardStats h3 {
+    color: hsl(0 91% 59%);
 }
 
 img {

@@ -1,16 +1,60 @@
-<html>
+<!DOCTYPE html>
     <head>
         <meta charset="utf-8">
         <title>My Leetcode badge</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body>
         {% if response_status != 200%}
             <h1>Error {{response_status}} : Failed to retrieve data :(</h1>
         {% else %}
         <div class="badge">
-            <img src="{{profil_info['pfp']}}" alt="pfp">
+          
+            <div class="stats">
+                <div class="easyStats">
+                    <h3>Easy</h3>
+                    {{problem_info["easySolved"]}}/{{problem_info["totalEasy"]}}
+                </div>
+                <div class="mediumStats">
+                    <h3>Medium</h3>
+                    {{problem_info["mediumSolved"]}}/{{problem_info["totalMedium"]}}
+                </div>
+                <div class="hardStats">
+                    <h3>Hard</h3>
+                    {{problem_info["hardSolved"]}}/{{problem_info["totalHard"]}}
+                </div>
+            </div>
         </div>
+
+       <canvas id="Easy" width="130" height="130"></canvas>
+
+  <script>
+    const solved = {{problem_info["easySolved"]}};
+    const total = {{problem_info["totalEasy"]}};
+    
+    const ctx = document.getElementById('Easy').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        datasets: [{
+          data: [solved,total-solved],
+          backgroundColor: ['lightblue', 'lightgray'],
+        }]
+      },
+      options: {
+        cutout: '80%',
+        responsive: false,
+        rotation: -90,
+        circumference: 180,
+        plugins: {
+            legend: { display: false },
+            tooltip: { enabled: false }
+        }
+      }
+    });
+  </script>
+
         {% endif %}
     </body>
 </html>
