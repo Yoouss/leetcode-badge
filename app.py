@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import requests
+import requests, time
 
 app = Flask(__name__)
 CACHE = {}
@@ -23,8 +23,10 @@ def index():
                         "hardSolved" : data['hardSolved'], "totalHard" : data['totalHard']}
 
         return profil_info, problem_info
+    
+    now = time.time()
 
-    if "profil_info" in CACHE and "problem_info" in CACHE :
+    if all(k in CACHE for k in ("profil_info", "problem_info", "timestamp")) and now - CACHE["timestamp"] <= 86400 : # update of CACHE after 24h
         profil_info = CACHE["profil_info"]
         problem_info = CACHE["problem_info"]
         response_status_code = 200
@@ -40,6 +42,7 @@ def index():
             profil_info, problem_info = get_profil_info(data)
             CACHE["profil_info"] = profil_info
             CACHE["problem_info"] = problem_info
+            CACHE["timestamp"] = now
     
         else:
             profil_info = None
