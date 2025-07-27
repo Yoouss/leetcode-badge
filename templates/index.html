@@ -9,6 +9,17 @@
             <h1>Error {{response_status}} : Failed to retrieve data :(</h1>
         {% else %}
         <div class="badge">
+          <div class="leftside">
+            <div class="profil">
+              <div class="pfp">
+                <img src="{{ profil_info['pfp']}}">
+              </div>
+              <div class="username">
+                 <h2>{{ profil_info['username'] }}</h2>
+                 Rank : {{ profil_info['rank'] }}
+              </div>
+            </div>
+          </div>
           <div class="stats">
             
             <div class="easyStats">
@@ -39,20 +50,28 @@
 
 
     <script>
-      const easySolved = {{ problem_info["easySolved"] }};
-      const totalEasy = {{ problem_info["totalEasy"] }};
-      const easyPercentage = (easySolved / totalEasy) * 100;
-      document.getElementById('easy-bar').style.width = easyPercentage + '%';
+      const infos = [
+      {
+      "solved": {{ problem_info["easySolved"] }},
+      "total" : {{ problem_info["totalEasy"] }},
+      "barId" : "easy-bar"
+      },
+      {
+      "solved": {{ problem_info["mediumSolved"] }},
+      "total" : {{ problem_info["totalMedium"] }},
+      "barId" : "medium-bar"
+      },
+      {
+      "solved": {{ problem_info["hardSolved"] }},
+      "total" : {{ problem_info["totalHard"] }},
+      "barId" : "hard-bar"
+      }
+      ];
 
-      const mediumSolved = {{ problem_info["mediumSolved"] }};
-      const totalMedium = {{ problem_info["totalMedium"] }};
-      const mediumPercentage = (mediumSolved / totalMedium) * 100;
-      document.getElementById('medium-bar').style.width = mediumPercentage + '%';
-
-      const hardSolved = {{ problem_info["hardSolved"] }};
-      const totalHard = {{ problem_info["totalHard"] }};
-      const hardPercentage = (hardSolved / totalHard) * 100;
-      document.getElementById('hard-bar').style.width = hardPercentage + '%';
+      for (const info of infos) {
+        const percentage = (info["solved"] / info["total"]) * 100;
+        document.getElementById(info["barId"]).style.width = percentage + '%'; // It had the progress to the progress bars
+      }
     </script>
     {% endif %}
 </body>
