@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        {% if response_status != 200%}
+        {% if response_status != 200 %}
             <h1>Error {{response_status}} : Failed to retrieve data :(</h1>
         {% else %}
         <div class="badge">
@@ -18,6 +18,15 @@
                  <h2>{{ profil_info['username'] }}</h2>
                  Rank : {{ profil_info['rank'] }}
               </div>
+            </div>
+            <span>Problem solved : {{problem_info["totalSolved"]}} / {{problem_info["totalQuestions"]}}</span>
+            <div class="stack-container">
+              {% for stack in stackInfo.values() %}
+              <div class="stack">
+                <img src="{{ stack['icon'] }}">
+                <span>{{ stack["solved"] }}</span>
+              </div>
+              {% endfor %}
             </div>
           </div>
           <div class="stats">
@@ -69,8 +78,10 @@
       ];
 
       for (const info of infos) {
-        const percentage = (info["solved"] / info["total"]) * 100;
-        document.getElementById(info["barId"]).style.width = percentage + '%'; // It had the progress to the progress bars
+        // I added a bonus of bonus 3% to give the progress bar a sense if it's too low to be seen
+        // I also made sure the % can't be above 100 %
+        const percentage = (info["solved"] / info["total"]) * 100 + 3; 
+        document.getElementById(info["barId"]).style.width = Math.min(100, percentage) + '%';
       }
     </script>
     {% endif %}

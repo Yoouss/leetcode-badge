@@ -1,7 +1,8 @@
 div.badge {
     display: flex;
-    width: 495px;
-    height: 195px;
+    width: 455px;
+    height: 155px;
+    padding: 20px;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(254, 254, 254);
@@ -27,6 +28,11 @@ div.pfp img {
     border-radius: 50%;
 }
 
+div.stack img {
+    width : 50px;
+    aspect-ratio: 1;
+}
+
 div.username {
     line-height: 0.55;
     font-family: 'Poppins', sans-serif;
@@ -37,6 +43,17 @@ div.username {
 div.username h2 {
     font-size: 23px;
     font-weight: 500;
+}
+
+div.stack-container {
+    display: flex;
+    flex-direction: row;
+}
+
+div.stack {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 div.easyStats, div.mediumStats, div.hardStats {
