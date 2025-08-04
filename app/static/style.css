@@ -8,63 +8,75 @@ div.badge {
     background-color: rgb(254, 254, 254);
     border: solid black 3px;
     border-radius: 15px;
+    overflow: hidden;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 }
 
-span {
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.732);
+div.leftside {
+    width: 60%;
 }
 
 div.profil {
     display: flex;
     columns : 2;
-    column-gap: 10px;
+    column-gap: 4%;
 }
 
 div.pfp img {
     border: solid #6366f1 3px;
     width: 70px;
-    height: 70px;
     border-radius: 50%;
 }
 
-div.stack img {
-    width : 50px;
-    aspect-ratio: 1;
-}
-
 div.username {
-    line-height: 0.55;
+    line-height: 0.45;
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    color : rgb(0, 0, 0);
+    font-size: 0.9rem;
 }
 
 div.username h2 {
-    font-size: 23px;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
+div.username li {
+    margin-left : 17px;
+}
+
 div.stack-container {
+    margin-top: 8px;
     display: flex;
     flex-direction: row;
+    gap: 17px;
 }
 
 div.stack {
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
+}
+
+div.stack img {
+    width : 48px;
+    aspect-ratio: 1;
+    border-radius: 10%;
+}
+
+div.stack span {
+    font-size: 17px;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 div.easyStats, div.mediumStats, div.hardStats {
     display: flex;
     width: 130px;
     height: 38px;
-    background-color: rgb(253, 253, 253);
     align-items: center;
     justify-content: space-evenly;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
     font-size: 14px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.732);
 }
 
 div.progress-container {

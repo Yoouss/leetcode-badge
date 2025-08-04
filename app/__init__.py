@@ -9,7 +9,7 @@ CACHE = {}
 def index():
     now = time.time()
 
-    if all(k in CACHE for k in ("profil_info", "problem_info", "timestamp")) and now - CACHE["timestamp"] <= 86400 : # update of CACHE after 24h
+    if all(k in CACHE for k in ("profil_info", "problem_info", "stackInfo", "timestamp")) and now - CACHE["timestamp"] <= 86400 : # update of CACHE after 24h
         profil_info = CACHE["profil_info"]
         problem_info = CACHE["problem_info"]
         stackInfo = CACHE["stackInfo"]

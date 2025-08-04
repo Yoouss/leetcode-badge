@@ -16,15 +16,14 @@
               </div>
               <div class="username">
                  <h2>{{ profil_info['username'] }}</h2>
-                 Rank : {{ profil_info['rank'] }}
+                 <li>{{problem_info["totalSolved"]}} problems solved</li>
               </div>
             </div>
-            <span>Problem solved : {{problem_info["totalSolved"]}} / {{problem_info["totalQuestions"]}}</span>
             <div class="stack-container">
               {% for stack in stackInfo.values() %}
               <div class="stack">
                 <img src="{{ stack['icon'] }}">
-                <span>{{ stack["solved"] }}</span>
+                <span>{{ stack["solved"] }}%</span>
               </div>
               {% endfor %}
             </div>

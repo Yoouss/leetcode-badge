@@ -5,7 +5,7 @@ def get_profil_info() :
     Pre : (This function fecthes data from Leetcode)
     Post : Return profil_info (pfp, username, rank) (type : dict)
                   problem_info (easy, medium, hard and total solved) (type : dict)
-                  stackInfo (url to the programming language icon and problem solved) (type : dict[dict])
+                  stackInfo (url to the programming language icon and problem solved in %) (type : dict[dict])
                   the response.status_code (200 if we fecthed data, else it's another number)
            as a tuple.
     """
@@ -26,9 +26,9 @@ def get_profil_info() :
                         "hardSolved" : data['hardSolved'], "totalHard" : data['totalHard']}
         
         stackInfo = {"Python" : {"icon" : "static/stack/pythonIcon.jpg",
-                                 "solved" : data['totalSolved'] - 5},
+                                 "solved" : int((data['totalSolved'] - 5) / data['totalSolved'] * 100)},
                      "JavaScript" : {"icon" : "static/stack/javascriptIcon.jpg",
-                                     "solved" : data['totalSolved'] - 60}}
+                                     "solved" : int((data['totalSolved'] - 60) / data['totalSolved'] * 100)}}
     else:
         profil_info = None
         problem_info = None
