@@ -16,7 +16,7 @@
               </div>
               <div class="username">
                  <h2>{{ profil_info['username'] }}</h2>
-                 <li>{{problem_info["totalSolved"]}} problems solved</li>
+                 <li><b>{{problem_info["totalSolved"]}}</b> problems solved</li>
               </div>
             </div>
             <div class="stack-container">
@@ -32,7 +32,7 @@
             
             <div class="easyStats">
               <h3>Easy</h3>
-              <span>{{problem_info["easySolved"]}} / {{problem_info["totalEasy"]}}</span>
+              <span><b>{{problem_info["easySolved"]}}</b> / {{problem_info["totalEasy"]}}</span>
             </div>
             <div class="progress-container">
               <div class="progress-bar easy-bar" id="easy-bar"></div>
@@ -40,7 +40,7 @@
 
             <div class="mediumStats">
               <h3>Medium</h3>
-              <span>{{problem_info["mediumSolved"]}} / {{problem_info["totalMedium"]}}</span>
+              <span><b>{{problem_info["mediumSolved"]}}</b> / {{problem_info["totalMedium"]}}</span>
             </div>
             <div class="progress-container">
               <div class="progress-bar medium-bar" id="medium-bar"></div>
@@ -48,7 +48,7 @@
         
             <div class="hardStats">
               <h3>Hard</h3>
-              <span>{{problem_info["hardSolved"]}} / {{problem_info["totalHard"]}}</span>
+              <span><b>{{problem_info["hardSolved"]}}</b> / {{problem_info["totalHard"]}}</span>
             </div>
             <div class="progress-container">
               <div class="progress-bar hard-bar" id="hard-bar"></div>

@@ -5,7 +5,6 @@ div.badge {
     padding: 20px;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(254, 254, 254);
     border: solid black 3px;
     border-radius: 15px;
     overflow: hidden;
@@ -43,11 +42,17 @@ div.username li {
     margin-left : 17px;
 }
 
+div.username b {
+    color: #6366f1;
+    font-size: 1.2rem;
+}
+
 div.stack-container {
-    margin-top: 8px;
+    margin-top: 9px;
+    margin-left: 10px;
     display: flex;
     flex-direction: row;
-    gap: 17px;
+    gap: 40px;
 }
 
 div.stack {
@@ -58,7 +63,7 @@ div.stack {
 }
 
 div.stack img {
-    width : 48px;
+    width : 49px;
     aspect-ratio: 1;
     border-radius: 10%;
 }
@@ -76,7 +81,12 @@ div.easyStats, div.mediumStats, div.hardStats {
     justify-content: space-evenly;
     font-size: 14px;
     font-weight: 600;
-    color: rgba(0, 0, 0, 0.732);
+    color: rgba(74, 74, 74, 0.645);
+}
+
+div.stats b {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.762);
 }
 
 div.progress-container {

@@ -25,7 +25,7 @@ def get_profil_info() :
                         "mediumSolved" : data['mediumSolved'], "totalMedium" : data['totalMedium'],
                         "hardSolved" : data['hardSolved'], "totalHard" : data['totalHard']}
         
-        stackInfo = {"Python" : {"icon" : "static/stack/pythonIcon.jpg",
+        stackInfo = {"Python" : {"icon" : "static/stack/pythonIcon.png",
                                  "solved" : int((data['totalSolved'] - 5) / data['totalSolved'] * 100)},
                      "JavaScript" : {"icon" : "static/stack/javascriptIcon.jpg",
                                      "solved" : int((data['totalSolved'] - 60) / data['totalSolved'] * 100)}}
