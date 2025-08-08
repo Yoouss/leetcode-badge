@@ -5,10 +5,13 @@ div.badge {
     padding: 20px;
     justify-content: space-between;
     align-items: center;
-    border: solid black 3px;
-    border-radius: 15px;
+
+    border: solid transparent 3.5px;
+    border-image: linear-gradient(#4f46e5,#6366f1,#8b5cf6,#a855f7,#bf63f1);
+    border-image-slice: 1;
+
     overflow: hidden;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    font-family: "Roboto", sans-serif;
 }
 
 div.leftside {
@@ -21,19 +24,31 @@ div.profil {
     column-gap: 4%;
 }
 
+div.pfp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+    background: linear-gradient(#4f46e5,#6366f1,#8b5cf6,#a855f7,#bf63f1);
+    padding: 3px; 
+}
+
 div.pfp img {
-    border: solid #6366f1 3px;
-    width: 70px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
 }
 
+
 div.username {
     line-height: 0.45;
-    font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
 }
 
 div.username h2 {
+    color: #6366f1;
     font-size: 1.5rem;
     font-weight: 500;
 }
@@ -43,7 +58,7 @@ div.username li {
 }
 
 div.username b {
-    color: #6366f1;
+    color: #bf63f1;
     font-size: 1.2rem;
 }
 
@@ -70,7 +85,6 @@ div.stack img {
 
 div.stack span {
     font-size: 17px;
-    font-family: 'JetBrains Mono', monospace;
 }
 
 div.easyStats, div.mediumStats, div.hardStats {
@@ -80,12 +94,10 @@ div.easyStats, div.mediumStats, div.hardStats {
     align-items: center;
     justify-content: space-evenly;
     font-size: 14px;
-    font-weight: 600;
     color: rgba(74, 74, 74, 0.645);
 }
 
 div.stats b {
-    font-weight: 600;
     color: rgba(0, 0, 0, 0.762);
 }
 
