@@ -3,7 +3,7 @@
 ## 🔍 Overview
 This mini-project is built with **Flask**, a **Python** web framework, to fetch data from **LeetCode** using an **API**
 
-<img src="badge_screenshot.png">
+<img src="app/static/badge.png">
 
 ## 🎯 Objective
 The goal is to display my badge on my personal **GitHub profile README** !
