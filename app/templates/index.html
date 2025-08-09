@@ -19,11 +19,11 @@
               </div>
               <div class="username">
                  <h2>{{ profil_info['username'] }}</h2>
-                 <li><b>{{problem_info["totalSolved"]}}</b> problems solved</li>
+                 <li><b>{{profil_info["totalSolved"]}}</b> problems solved</li>
               </div>
             </div>
             <div class="stack-container">
-              {% for stack in stackInfo.values() %}
+              {% for stack in stack_info.values() %}
               <div class="stack">
                 <img src="{{ stack['icon'] }}">
                 <span>{{ stack["solved"] }}%</span>
@@ -32,30 +32,15 @@
             </div>
           </div>
           <div class="stats">
-            
-            <div class="easyStats">
-              <h3>Easy</h3>
-              <span><b>{{problem_info["easySolved"]}}</b> / {{problem_info["totalEasy"]}}</span>
+            {% for score in problem_info.values() %}
+            <div class="{{ score['div'] }}">
+              <h3>{{ score['difficulty'] }}</h3>
+              <span><b>{{ score['solved'] }}</b> / {{ score['total'] }}</span>
             </div>
             <div class="progress-container">
-              <div class="progress-bar easy-bar" id="easy-bar"></div>
+              <div class="progress-bar {{ score['id'] }}" id="{{ score['id'] }}"></div>
             </div>
-
-            <div class="mediumStats">
-              <h3>Medium</h3>
-              <span><b>{{problem_info["mediumSolved"]}}</b> / {{problem_info["totalMedium"]}}</span>
-            </div>
-            <div class="progress-container">
-              <div class="progress-bar medium-bar" id="medium-bar"></div>
-            </div>
-        
-            <div class="hardStats">
-              <h3>Hard</h3>
-              <span><b>{{problem_info["hardSolved"]}}</b> / {{problem_info["totalHard"]}}</span>
-            </div>
-            <div class="progress-container">
-              <div class="progress-bar hard-bar" id="hard-bar"></div>
-            </div>
+            {% endfor %}
           </div>
         </div>
 
@@ -63,19 +48,19 @@
     <script>
       const infos = [
       {
-      "solved": {{ problem_info["easySolved"] }},
-      "total" : {{ problem_info["totalEasy"] }},
-      "barId" : "easy-bar"
+      "solved": {{ problem_info["Easy"]["solved"] }},
+      "total" : {{ problem_info["Easy"]["total"] }},
+      "barId" : '{{ problem_info["Easy"]["id"] }}'
       },
       {
-      "solved": {{ problem_info["mediumSolved"] }},
-      "total" : {{ problem_info["totalMedium"] }},
-      "barId" : "medium-bar"
+      "solved": {{ problem_info["Medium"]["solved"] }},
+      "total" : {{ problem_info["Medium"]["total"] }},
+      "barId" : '{{ problem_info["Medium"]["id"] }}'
       },
       {
-      "solved": {{ problem_info["hardSolved"] }},
-      "total" : {{ problem_info["totalHard"] }},
-      "barId" : "hard-bar"
+      "solved": {{ problem_info["Hard"]["solved"] }},
+      "total" : {{ problem_info["Hard"]["total"] }},
+      "barId" : '{{ problem_info["Hard"]["id"] }}'
       }
       ];
 

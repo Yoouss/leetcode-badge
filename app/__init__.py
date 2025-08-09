@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 import time
 from app.models.user import *
 
@@ -9,21 +9,25 @@ CACHE = {}
 def index():
     now = time.time()
 
-    if all(k in CACHE for k in ("profil_info", "problem_info", "stackInfo", "timestamp")) and now - CACHE["timestamp"] <= 86400 : # update of CACHE after 24h
+    if all(k in CACHE for k in ("profil_info", "problem_info", "stack_info", "timestamp")) and now - CACHE["timestamp"] <= 86400 : # update of CACHE after 24h
         profil_info = CACHE["profil_info"]
         problem_info = CACHE["problem_info"]
-        stackInfo = CACHE["stackInfo"]
+        stack_info = CACHE["stack_info"]
         response_status = 200
 
     else :
-        profil_info, problem_info, stackInfo, response_status = get_profil_info()
+        profil_info, problem_info, stack_info, response_status = get_profil_info()
         CACHE["profil_info"] = profil_info
         CACHE["problem_info"] = problem_info
-        CACHE["stackInfo"] = stackInfo
+        CACHE["stack_info"] = stack_info
         CACHE["timestamp"] = now
 
     return render_template('index.html',
                             response_status = response_status,
                             profil_info = profil_info,
                             problem_info = problem_info,
-                            stackInfo = stackInfo)
+                            stack_info = stack_info)
+
+@app.route('/badge')
+def my_badge():
+    return send_from_directory('static', 'badge.png')
