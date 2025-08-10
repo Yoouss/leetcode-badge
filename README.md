@@ -1,4 +1,4 @@
-# My First Mini Personal Project: **A Custom LeetCode Badge**
+# ⭐ My First Mini Project: **A Custom LeetCode Badge**
 
 ## 🔍 Overview
 This mini-project is built with **Flask**, a **Python** web framework, to fetch data from **LeetCode** using an **API** **every 24h**
