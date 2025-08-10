@@ -1,11 +1,9 @@
 # My First Mini Personal Project: **A Custom LeetCode Badge**
 
 ## 🔍 Overview
-This mini-project is built with **Flask**, a **Python** web framework, to fetch data from **LeetCode** using an **API**
+This mini-project is built with **Flask**, a **Python** web framework, to fetch data from **LeetCode** using an **API** **every 24h**
 
-<a href="https://leetcode-badge.onrender.com/">
-  <img src="app/static/badge.png">
-</a>
+[![My LeetCode badge](https://raw.githubusercontent.com/Younesdjzz/leetcode-badge/main/app/static/badge.png)](https://leetcode-badge.onrender.com/)
 
 ## 🎯 Objective
 The goal is to display my badge on my personal **GitHub profile README** !
