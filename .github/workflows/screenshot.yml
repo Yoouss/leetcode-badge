@@ -1,6 +1,7 @@
 name: Run screenshot.py every 24h
 
 on:
+  workflow_dispatch:
   schedule:
     # Everyday at midnight
     - cron: "0 0 * * *"
@@ -22,6 +23,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+      
+      - name: Install Playwright browsers
+        run: playwright install --with-deps
 
       - name: Run screenshot script
         run: python app/screenshot.py
