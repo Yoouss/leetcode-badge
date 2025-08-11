@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template
 import time
 from app.models.user import *
 
@@ -27,7 +27,3 @@ def index():
                             profil_info = profil_info,
                             problem_info = problem_info,
                             stack_info = stack_info)
-
-@app.route('/badge')
-def my_badge():
-    return send_from_directory('static', 'badge.png')
