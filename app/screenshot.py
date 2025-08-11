@@ -20,7 +20,7 @@ def waking_up_the_website(page, url, request_cooldown, loading_time) :
     return False
             
         
-def capture_badge(url="https://leetcode-badge.onrender.com/", output_file="app/static/badge.png") :
+def capture_badge(url="https://leetcode-badge.onrender.com/", output_file="app/static/badge2.png") :
     """
         Pre : url is the website where the LeetCode badge is heberged
               => I used Render so the website can be in a sleeping mode if there aren't visitors (I anticiped this case)
