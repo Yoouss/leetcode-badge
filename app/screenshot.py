@@ -1,5 +1,6 @@
 from playwright.sync_api import sync_playwright
 import time
+import os
 
 def waking_up_the_website(page, url, request_cooldown, loading_time) :
     """
@@ -39,6 +40,8 @@ def capture_badge(url="https://leetcode-badge.onrender.com/", output_file="app/s
 
         badge = page.query_selector("div.badge")
         if badge:
+            if os.path.exists(output_file): # We delete the previous screenshot if there's one
+                os.remove(output_file)
             badge.screenshot(path=output_file)
             print(f"Screenshot saved as {output_file}")
         else:
