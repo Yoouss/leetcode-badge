@@ -1,5 +1,8 @@
 name: Run screenshot.py every 24h
 
+permissions:
+  contents: write
+
 on:
   push:
     branches:
