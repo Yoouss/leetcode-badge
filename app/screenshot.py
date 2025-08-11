@@ -2,7 +2,7 @@ from playwright.sync_api import sync_playwright
 
 def capture_badge(url="https://leetcode-badge.onrender.com/", output_file="app/static/badge.png"):
     with sync_playwright() as p:
-        browser = p.firefox.launch(headless=True)
+        browser = p.chromium.launch(headless=True)
         page = browser.new_page()
         page.goto(url)
 
