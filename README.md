@@ -2,8 +2,12 @@
 
 ## 🔍 Overview
 This mini-project is built with **Flask**, a **Python** web framework, to fetch data from **LeetCode** using an **API** **every 24h**
-
-[![My LeetCode badge](https://raw.githubusercontent.com/Younesdjzz/leetcode-badge/main/app/static/badge.png)](https://leetcode-badge.onrender.com/)
+- Hosted on [https://leetcode-badge.onrender.com/](https://leetcode-badge.onrender.com) (HTML/CSS)
+- Hosted on the **repository** : app/static/badge.png (PNG image)
+### ⚠️ Caution :
+The website is hosted on **Render** so it may be in a sleeping mode. Try again after few minutes
+  
+[![My LeetCode badge](https://raw.githubusercontent.com/Younesdjzz/leetcode-badge/main/app/static/badge.png)](https://leetcode.com/u/Younesdjzz/)
 
 ## 🎯 Objective
 The goal is to display my badge on my personal **GitHub profile README** !
