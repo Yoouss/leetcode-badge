@@ -40,6 +40,8 @@ def capture_badge(url="https://leetcode-badge.onrender.com/", output_file="app/s
 
         badge = page.query_selector("div.badge")
         if badge:
+            if os.path.exists(output_file) :
+                os.remove(output_file)
             badge.screenshot(path=output_file)
             print(f"Screenshot saved as {output_file}")
         else:
