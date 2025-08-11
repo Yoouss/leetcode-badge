@@ -20,7 +20,7 @@ def waking_up_the_website(page, url, request_cooldown, loading_time) :
     return False
             
         
-def capture_badge(url="https://leetcode-badge.onrender.com/", output_file="app/static/badge2.png") :
+def capture_badge(url="https://leetcode-badge.onrender.com/", output_file="app/static/badge.png") :
     """
         Pre : url is the website where the LeetCode badge is heberged
               => I used Render so the website can be in a sleeping mode if there aren't visitors (I anticiped this case)
@@ -40,8 +40,6 @@ def capture_badge(url="https://leetcode-badge.onrender.com/", output_file="app/s
 
         badge = page.query_selector("div.badge")
         if badge:
-            if os.path.exists(output_file): # We delete the previous screenshot if there's one
-                os.remove(output_file)
             badge.screenshot(path=output_file)
             print(f"Screenshot saved as {output_file}")
         else:
