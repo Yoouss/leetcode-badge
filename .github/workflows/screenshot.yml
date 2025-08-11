@@ -25,7 +25,9 @@ jobs:
           pip install -r requirements.txt
       
       - name: Install Playwright Firefox
-        run: playwright install firefox --with-deps
+        run: |
+          playwright install firefox --with-deps
+          ls -R /home/runner/.cache/ms-playwright || true
 
       - name: Run screenshot script
         run: python app/screenshot.py
