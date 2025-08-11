@@ -1,6 +1,9 @@
 name: Run screenshot.py every 24h
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
   schedule:
     # Everyday at midnight
