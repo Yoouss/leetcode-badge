@@ -32,10 +32,10 @@ def waiting_for_the_website_to_load(page, refresh=360, refresh_cooldown=15) :
     refresh_count = 0
     while not badge and refresh_count < refresh : # We keep trying for max 1h30
         page.reload()
+        refresh_count += 1
         print("Loading the website... Next refresh in {} seconds... ({} refresh/{})".format(refresh_cooldown, refresh_count, refresh))
         badge = page.query_selector("div.badge")
         time.sleep(refresh_cooldown)
-        refresh_count += 1
 
     if badge :
         print("Website successfully loaded !")
