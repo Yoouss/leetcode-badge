@@ -1,25 +1,5 @@
 from playwright.sync_api import sync_playwright
 import time
-import os
-
-def waking_up_the_website(browser, url, request_cooldown=60, loading_time=90) :
-    """
-        Pre : browser and url are provided by the function capture_badge()
-              request_cooldown is the time in second (int) to wait before making another request to the url
-              loading_time is the time in second (int) it takes to try to wake the website up
-        Post : If we succeeded, we return the page, otherwise False
-    """
-    print("The website is probably sleeping... Waiting until it wakes up...")
-    for request in range(1, loading_time+1) :
-        try :
-            page = browser.new_page()
-            page.goto(url)
-            return page
-        except :
-            print("Attempt {} : The website is still sleeping, {} seconds cooldown...".format(request, request_cooldown))
-            page.close()
-            time.sleep(request_cooldown)
-    return False
 
 def waiting_for_the_website_to_load(page, refresh=360, refresh_cooldown=15) :
     """
@@ -54,23 +34,13 @@ def capture_badge(url="https://leetcode-badge.onrender.com/", output_file="app/s
     with sync_playwright() as p:
         browser = p.firefox.launch(headless=True)
         page = browser.new_page()
-        try :
-            page.goto(url)
-        except :
-            page.close()
-            page = waking_up_the_website(browser, url)
-            if page == False :
-                print("Failed to wake the website up... screenshot failed :(")
-                browser.close()
-                return
+        page.goto(url)
 
         badge = waiting_for_the_website_to_load(page)
 
         if badge :
-            if os.path.exists(output_file) :
-                os.remove(output_file)
             badge.screenshot(path=output_file)
-            print(f"Screenshot saved as {output_file}")
+            print("Screenshot saved as {} - Job succeed :)".format(output_file))
         else:
             print("Something went wrong... if the website loaded, Maybe the API isn't working or the website has some issues :(")
         browser.close()
