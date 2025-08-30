@@ -22,7 +22,7 @@ It helped me **practice my HTML/CSS skills** and gave me the opportunity to **st
 - I built my badge **from scratch**, using **AI** as a tool to support my **learning** and strengthen my **software development skills** without losing control over it
 - First, I designed it using **HTML/CSS**, then I wrote a Python **screenshot script** using **AI assistance**
 
-## ❔How to use Flask ?
+## ❔ How to use Flask ?
 - First, **clone** the **repository** : <br>
 git clone https://github.com/Younesdjzz/leetcode-badge.git <br>
 cd leetcode-badge <br><br>
@@ -32,3 +32,9 @@ source venv/bin/activate <br>
 pip install -r requirements.txt <br><br>
 - Finally, to **lunch Flask**, use : <br>
 flask --app app --debug run
+
+## 🎁 Bonus : the evolution of the badge's design
+
+| <img src="archive/leetcode-badge-v1.png" width="400"> | <img src="archive/leetcode-badge-v2.png" width="400"> |
+|-------------------------------------------------------|-------------------------------------------------------|
+| <img src="archive/leetcode-badge-v3.png" width="400"> | <img src="archive/leetcode-badge-v4.png" width="400"> |
