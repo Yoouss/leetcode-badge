@@ -39,9 +39,11 @@ def get_profil_info() :
                                   "id" : "hard-bar"}}
         
         stack_info = {"Python" : {"icon" : "static/stack/pythonIcon.png",
-                                 "solved" : int((data['totalSolved'] - 5) / data['totalSolved'] * 100)},
+                                 "solved" : round((data['totalSolved'] - 8) / data['totalSolved'] * 100)},
                      "JavaScript" : {"icon" : "static/stack/javascriptIcon.jpg",
-                                     "solved" : int((data['totalSolved'] - 59) / data['totalSolved'] * 100)}}
+                                     "solved" : round((data['totalSolved'] - 62) / data['totalSolved'] * 100)},
+                     "SQL" : {"icon" : "static/stack/sqlIcon.png",
+                                     "solved" : round((data['totalSolved'] - 137) / data['totalSolved'] * 100)}}
     else:
         profil_info = None
         problem_info = None
