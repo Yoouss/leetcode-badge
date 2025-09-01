@@ -36,5 +36,4 @@ flask --app app --debug run
 ## 🎁 Bonus : the evolution of the badge's design
 
  <img src="archive/leetcode-badge-v1.png" width="400">  <img src="archive/leetcode-badge-v2.png" width="400"> 
-
  <img src="archive/leetcode-badge-v3.png" width="400">  <img src="archive/leetcode-badge-v4.png" width="400"> 
