@@ -41,7 +41,7 @@ def get_profil_info() :
         stack_info = {"Python" : {"icon" : "static/stack/pythonIcon.png",
                                  "solved" : round((data['totalSolved'] - 18) / data['totalSolved'] * 100)},
                      "JavaScript" : {"icon" : "static/stack/javascriptIcon.jpg",
-                                     "solved" : round((data['totalSolved'] - 12) / data['totalSolved'] * 100)},
+                                     "solved" : round((data['totalSolved'] - 72) / data['totalSolved'] * 100)},
                      "SQL" : {"icon" : "static/stack/sqlIcon.png",
                                      "solved" : round((data['totalSolved'] - 137) / data['totalSolved'] * 100)}}
     else:
