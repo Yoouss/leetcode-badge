@@ -39,6 +39,7 @@ def capture_badge(url="https://leetcode-badge.onrender.com/", output_file="app/s
         badge = waiting_for_the_website_to_load(page)
 
         if badge :
+            time.sleep(1) # Waiting for the progress bar animation to finish
             badge.screenshot(path=output_file)
             print("Screenshot saved as {} - Job succeed :)".format(output_file))
         else:
