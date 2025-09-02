@@ -9,7 +9,7 @@ def get_profil_info() :
                   the response.status_code (200 if we fecthed data, else it's another number)
            as a tuple.
     """
-    username = "Younesdjzz"  # LeetCode username
+    username = "Yoouss"  # LeetCode username
     url = "https://leetscan.vercel.app/{}".format(username)
     response = requests.get(url)
         
