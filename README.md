@@ -10,7 +10,7 @@ This mini-project is built with **Flask**, a **Python** web framework, to fetch 
 
 ⚠️ The website is hosted on **Render** so it may be in a sleeping mode. Try again few minutes later
   
-[![My LeetCode badge](https://raw.githubusercontent.com/Younesdjzz/leetcode-badge/main/app/static/badge.png)](https://leetcode.com/u/Younesdjzz/)
+[![My LeetCode badge](https://raw.githubusercontent.com/Yoouss/leetcode-badge/main/app/static/badge.png)](https://leetcode.com/u/Yoouss/)
 
 ## 💡 The meaning behind this project
 I wanted to **show my Leetcode stats on my GitHub profile**, but I only found a few models online and the **designs weren't optimal**... <br>
@@ -24,7 +24,7 @@ It helped me **practice my HTML/CSS skills** and gave me the opportunity to **st
 
 ## ❔ How to use Flask ?
 - First, **clone** the **repository** : <br>
-git clone https://github.com/Younesdjzz/leetcode-badge.git <br>
+git clone https://github.com/Yoouss/leetcode-badge.git <br>
 cd leetcode-badge <br><br>
 - Then, **install** the **requirement.txt** in an **virtual environment** : <br>
 python -m venv venv <br>
@@ -34,6 +34,5 @@ pip install -r requirements.txt <br><br>
 flask --app app --debug run
 
 ## 🎁 Bonus : the evolution of the badge's design
-
  <img src="archive/leetcode-badge-v1.png" width="400">  <img src="archive/leetcode-badge-v2.png" width="400"> 
  <img src="archive/leetcode-badge-v3.png" width="400">  <img src="archive/leetcode-badge-v4.png" width="400"> 
