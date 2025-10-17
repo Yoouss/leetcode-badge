@@ -67,7 +67,7 @@ div.stack-container {
     margin-left: 10px;
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 30px;
 }
 
 div.stack {
@@ -75,16 +75,19 @@ div.stack {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    background-size: cover;
 }
 
 div.stack img {
-    width : 49px;
+    width : 50px;
     aspect-ratio: 1;
     border-radius: 10%;
 }
 
 div.stack span {
-    font-size: 17px;
+    font-size: 16px;
+    color: #4d4fbcc6;
+    font-weight: 500;
 }
 
 div.easyStats, div.mediumStats, div.hardStats {
