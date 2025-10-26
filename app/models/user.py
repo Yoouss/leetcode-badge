@@ -38,8 +38,8 @@ def get_profil_info() :
                                   "div" : "hardStats",
                                   "id" : "hard-bar"}}
         
-        stack_info = {"Java" : {"icon" : "static/stack/javaIcon.png"},
-                      "Python" : {"icon" : "static/stack/pythonIcon.png"},
+        stack_info = {"Python" : {"icon" : "static/stack/pythonIcon.png"},
+                      "Java" : {"icon" : "static/stack/javaIcon.png"},
                       "JavaScript" : {"icon" : "static/stack/javascriptIcon.jpg"},
                       "SQL" : {"icon" : "static/stack/sqlIcon.png"}}
     else:
