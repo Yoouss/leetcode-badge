@@ -30,7 +30,7 @@ It helped me **practice my HTML/CSS skills** and gave me the opportunity to **st
 git clone https://github.com/Yoouss/leetcode-badge.git
 cd leetcode-badge
 ```
-- Then, **install** the **requirement.txt** in an **virtual environment** :
+- Then, **install** the **requirements.txt** in an **virtual environment** :
 ```bash
 python -m venv venv
 source venv/bin/activate
