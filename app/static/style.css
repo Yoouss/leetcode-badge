@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+html, body {
+    background: white;
+}
+
 div.badge {
     display: flex;
-    width: 455px;
-    height: 155px;
+    width: 470px;
+    height: 170px;
     padding: 20px;
     justify-content: space-between;
     align-items: center;
@@ -11,7 +17,8 @@ div.badge {
     border-image-slice: 1;
 
     overflow: hidden;
-    font-family: "Roboto", sans-serif;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
 }
 
 div.leftside {
@@ -67,7 +74,7 @@ div.stack-container {
     margin-left: 10px;
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 29px;
 }
 
 div.stack {
@@ -79,7 +86,7 @@ div.stack {
 }
 
 div.stack img {
-    width : 50px;
+    width : 49.5px;
     aspect-ratio: 1;
     border-radius: 10%;
 }
@@ -92,7 +99,7 @@ div.stack span {
 
 div.easyStats, div.mediumStats, div.hardStats {
     display: flex;
-    width: 130px;
+    width: 145px;
     height: 38px;
     align-items: center;
     justify-content: space-evenly;
@@ -107,7 +114,7 @@ div.stats b {
 div.progress-container {
     background-color: rgb(236, 236, 236);
     border-radius: 7px;
-    width: 130px;
+    width: 145px;
     height: 20px;
     overflow: hidden;
 }

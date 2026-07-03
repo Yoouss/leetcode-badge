@@ -80,16 +80,33 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+if you're using **VSCode** (or any fork of it), the **`.vscode` folder helps to automatically use the virtual environment**
+
+**You can remove the `.vscode` folder if you don't need it**
+
 ## Usage
 
-To run the project locally, **start the Flask development server** :
+**Each time you open the project**, activate the virtual environment :
+
+```bash
+source venv/bin/activate
+```
+
+Then start the Flask development server **to run the project locally** :
 
 ```bash
 flask --app app --debug run
 ```
 
+**Each time you leave the project**, deactivate the virtual environement :
+
+```bash
+deactivate
+```
+
 > [!CAUTION]
-> If you send **too many requests to the API** that fetches LeetCode stats, **errors may occur**
+> If you send **too many requests to the API** that fetches LeetCode stats, **errors may occur** <br>
+> A cache system prevents it in `__init__.py`
 
 
 ## Bonus : the evolution of the badge's design

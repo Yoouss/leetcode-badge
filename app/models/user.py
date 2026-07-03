@@ -38,10 +38,10 @@ def get_profil_info() :
                                   "div" : "hardStats",
                                   "id" : "hard-bar"}}
         
-        stack_info = {"Python" : {"icon" : "static/stack/pythonIcon.png"},
-                      "Java" : {"icon" : "static/stack/javaIcon.png"},
-                      "JavaScript" : {"icon" : "static/stack/javascriptIcon.jpg"},
-                      "SQL" : {"icon" : "static/stack/sqlIcon.png"}}
+        stack_info = {"Java" : {"icon" : "static/stack/java.png"},
+                      "C" : {"icon" : "static/stack/c.png"},
+                      "Python" : {"icon" : "static/stack/python.png"},
+                      "JavaScript" : {"icon" : "static/stack/javascript.png"}}
     else:
         profil_info = None
         problem_info = None
